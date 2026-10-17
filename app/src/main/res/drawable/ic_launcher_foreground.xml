@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="108dp"
+	android:height="108dp"
+	android:viewportWidth="108"
+	android:viewportHeight="108">
+	<!-- TV casing -->
+	<path
+		android:fillColor="#F2F2F2"
+		android:pathData="M38,30 h32 a10,10 0 0 1 10,10 v28 a10,10 0 0 1 -10,10 h-32 a10,10 0 0 1 -10,-10 v-28 a10,10 0 0 1 10,-10 z" />
+	<!-- Eyes -->
+	<path
+		android:fillColor="#101014"
+		android:pathData="M42,44 h8 v8 h-8 z" />
+	<path
+		android:fillColor="#101014"
+		android:pathData="M58,44 h8 v8 h-8 z" />
+	<!-- Mouth -->
+	<path
+		android:fillColor="#101014"
+		android:pathData="M46,60 h16 v4 h-16 z" />
+</vector>

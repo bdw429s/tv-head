@@ -1,0 +1,104 @@
+{
+	"//": "TV Head mapping. Lives in the repo so it is version controlled; tools/push-media.ps1 pushes it to the tablet.",
+	"//keys": "PROVISIONAL key names below. Press each key on the real keypad with showKeyDebug on, read the name off the screen, and swap these out.",
+	"//combos": "Modifiers work: Ctrl, Shift, Alt, Meta. e.g. Ctrl+Shift+A. A chord matches only when exactly those keys are held, so A and Ctrl+A are different bindings.",
+	"//default": "The face shown on launch. Change this to whichever should be the resting face.",
+	"//media": "A video loops forever; a .jpg is held as a still. Whatever is pressed stays until the next key.",
+	"default": "flat_mouth.jpg",
+	"scale": "fit",
+	"showKeyDebug": true,
+	"bindings": [
+		{
+			"keys": "F13",
+			"media": "angry.mp4"
+		},
+		{
+			"keys": "F14",
+			"media": "big_mouth.mp4"
+		},
+		{
+			"keys": "F15",
+			"media": "blush_smile.mp4"
+		},
+		{
+			"keys": "F16",
+			"media": "blushing_squiggle.mp4"
+		},
+		{
+			"keys": "F17",
+			"media": "cat.mp4"
+		},
+		{
+			"keys": "F18",
+			"media": "crying.mp4"
+		},
+		{
+			"keys": "F19",
+			"media": "flat_mouth.mp4"
+		},
+		{
+			"keys": "F20",
+			"media": "pointy_lip.mp4"
+		},
+		{
+			"keys": "F21",
+			"media": "silent_squiggle.mp4"
+		},
+		{
+			"keys": "F22",
+			"media": "smile.mp4"
+		},
+		{
+			"keys": "F23",
+			"media": "angry.jpg"
+		},
+		{
+			"keys": "F24",
+			"media": "blushing_smile.jpg"
+		},
+		{
+			"keys": "1",
+			"media": "cat.jpg"
+		},
+		{
+			"keys": "2",
+			"media": "crazy_teeth.jpg"
+		},
+		{
+			"keys": "3",
+			"media": "flat_mouth.jpg"
+		},
+		{
+			"keys": "4",
+			"media": "flat_mouth_dimple.jpg"
+		},
+		{
+			"keys": "5",
+			"media": "pointy_lip.jpg"
+		},
+		{
+			"keys": "6",
+			"media": "potatoe_mouth.jpg"
+		},
+		{
+			"keys": "7",
+			"media": "sad.jpg"
+		},
+		{
+			"keys": "8",
+			"media": "smile.jpg"
+		},
+		{
+			"keys": "9",
+			"media": "squiggle.jpg"
+		},
+		{
+			"keys": "Ctrl+Shift+R",
+			"media": "__rescan__"
+		},
+		{
+			"keys": "Ctrl+Shift+Q",
+			"media": "__quit__"
+		}
+	]
+}

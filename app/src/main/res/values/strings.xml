@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">TV Head</string>
+	<string name="settings_icon">Settings</string>
+	<string name="settings_title">Bindings</string>
+	<string name="settings_preview">Preview</string>
+	<string name="settings_is_video">Video</string>
+	<string name="settings_rebind">Re-bind key</string>
+	<string name="settings_reset">Clear key</string>
+	<string name="settings_close">Close</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="ic_launcher_background">#101014</color>
+	<!-- Background behind the media: white, not black. Switching media briefly blanks the
+	     player surface before the next frame is ready, and the artwork is drawn on white, so
+	     a white backdrop makes that gap far less noticeable than a black flash. -->
+	<color name="app_background">#FFFFFFFF</color>
+</resources>
