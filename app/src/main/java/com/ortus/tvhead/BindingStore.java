@@ -64,13 +64,18 @@ public final class BindingStore {
         int imported = 0;
         for (Map.Entry<KeyChord, String> entry : config.bindings().entrySet()) {
             String fileName = entry.getValue();
+            if (fileName == null || fileName.trim().isEmpty()) {
+                continue;
+            }
             if (known.containsKey(normalise(fileName))) {
                 continue;
             }
-            if (alreadyHasFile(entry.getKey(), fileName)) {
+            if (lookup(entry.getKey().keys()) != null) {
+                // That key is already spoken for on the tablet; the store wins.
                 continue;
             }
-            put(entry.getKey(), fileName);
+            bind(entry.getKey(), fileName);
+            known.put(normalise(fileName), entry.getKey());
             imported++;
         }
         if (imported > 0) {
@@ -225,16 +230,6 @@ public final class BindingStore {
             Log.i(TAG, "Pruned " + removed + " binding(s) for media that is gone");
         }
         return removed;
-    }
-
-    /**
-     * @param chord    the chord to test
-     * @param fileName the file name to test
-     * @return true when this exact key is already recorded for this exact file
-     */
-    private boolean alreadyHasFile(KeyChord chord, String fileName) {
-        KeyChord existing = chordForFile(fileName);
-        return existing != null && existing.equals(chord);
     }
 
     /**

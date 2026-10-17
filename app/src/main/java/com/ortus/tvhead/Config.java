@@ -33,7 +33,7 @@ import java.util.Set;
  *     { "keys": "F13",          "media": "laugh.mp4" },
  *     { "keys": "Ctrl+Shift+A", "media": "sad.mp4" },
  *     { "keys": "F16",          "media": "still.jpg" },
- *     { "keys": "F17",          "media": "__rescan__" }
+ *     { "keys": "F17",          "media": "still.jpg" }
  *   ]
  * }
  * </pre>
@@ -50,14 +50,12 @@ import java.util.Set;
  *       held, so {@code "A"} and {@code "Ctrl+A"} are different bindings</li>
  * </ul>
  *
- * <p>Each binding has a {@code video} value naming a file to show. A video loops; a still
+ * <p>Each binding has a {@code media} value naming a file to show. A video loops; a still
  * image is held on screen. Whichever it is, the display stays there until another chord is
  * pressed - nothing returns to the default face on its own.</p>
  *
- * <p>A {@code video} value may also be an action instead of a file:
- * {@code "__quit__"} exits the app and {@code "__rescan__"} re-reads this config and the
- * media folder - useful as an escape hatch because unmapped keys are ignored and the
- * device's Back button is consumed.</p>
+ * <p>Bindings are only read to seed {@link BindingStore} the first time a file is seen.
+ * After that the store is authoritative and nothing here can overwrite it.</p>
  *
  * <p>A missing {@code media.json} is not an error: the app writes a starter file on first
  * run and falls back to showing whatever media it can find.</p>
@@ -65,12 +63,6 @@ import java.util.Set;
 public final class Config {
 
     private static final String TAG = "TvHead";
-
-    /** Action value that closes the app. */
-    public static final String ACTION_QUIT = "__quit__";
-
-    /** Action value that re-reads the config and media folders. */
-    public static final String ACTION_RESCAN = "__rescan__";
 
     /** Scale mode that letterboxes to preserve aspect ratio. */
     public static final String SCALE_FIT = "fit";
@@ -355,8 +347,7 @@ public final class Config {
                     + "    { \"keys\": \"F13\", \"media\": \"clip1.mp4\" },\n"
                     + "    { \"keys\": \"F14\", \"media\": \"clip2.mp4\" },\n"
                     + "    { \"keys\": \"F16\", \"media\": \"still1.jpg\" },\n"
-                    + "    { \"keys\": \"F17\", \"media\": \"__rescan__\" },\n"
-                    + "    { \"keys\": \"Ctrl+Shift+Q\", \"media\": \"__quit__\" }\n"
+                    + "    { \"keys\": \"F17\", \"media\": \"still2.jpg\" }\n"
                     + "  ]\n"
                     + "}\n";
 }

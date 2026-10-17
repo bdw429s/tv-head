@@ -91,14 +91,6 @@
 		{
 			"keys": "9",
 			"media": "squiggle.jpg"
-		},
-		{
-			"keys": "Ctrl+Shift+R",
-			"media": "__rescan__"
-		},
-		{
-			"keys": "Ctrl+Shift+Q",
-			"media": "__quit__"
 		}
 	]
 }

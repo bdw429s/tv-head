@@ -5,6 +5,8 @@
 	<string name="settings_title">Bindings</string>
 	<string name="settings_preview">Preview</string>
 	<string name="settings_is_video">Video</string>
+	<string name="settings_group_videos">VIDEOS</string>
+	<string name="settings_group_stills">STILLS</string>
 	<string name="settings_rebind">Re-bind key</string>
 	<string name="settings_reset">Clear key</string>
 	<string name="settings_close">Close</string>
